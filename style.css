@@ -1,0 +1,89 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 6px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 11px;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 3px;
+  text-align: center;
+}
+input, select {
+  padding: 3px;
+  font-size: 12px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+#profitSelect {
+  font-size: 10px;
+}
+.container {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.topbar {
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.double-dp {
+  color: white;
+  font-weight: bold;
+}
+
+
+body.theme-blue { background-color: #e5f0ff; }
+body.theme-blue .topbar { background-color: #005ce6; }
+body.theme-blue th { background-color: #0a63ff; color: white; }
+body.theme-blue tr:nth-child(even) { background-color: #f2f9ff; }
+body.theme-blue .double-dp { background-color: #27c400; }
+
+body.theme-purple { background-color: #f3e8ff; }
+body.theme-purple .topbar { background-color: #9333ea; }
+body.theme-purple th { background-color: #a855f7; color: white; }
+body.theme-purple tr:nth-child(even) { background-color: #f5f3ff; }
+body.theme-purple .double-dp { background-color: #9333ea; }
+
+body.theme-green { background-color: #d1fae5; }
+body.theme-green .topbar { background-color: #059669; }
+body.theme-green th { background-color: #34d399; color: white; }
+body.theme-green tr:nth-child(even) { background-color: #ecfdf5; }
+body.theme-green .double-dp { background-color: #059669; }
+
+body.theme-pink { background-color: #ffe4e6; }
+body.theme-pink .topbar { background-color: #f43f5e; }
+body.theme-pink th { background-color: #fb7185; color: white; }
+body.theme-pink tr:nth-child(even) { background-color: #fff1f2; }
+body.theme-pink .double-dp { background-color: #f43f5e; }
+
+.theme-buttons {
+  margin: 10px 0;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.theme-buttons button {
+  padding: 6px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.blue { background-color: #0a63ff; }
+.purple { background-color: #a855f7; }
+.green { background-color: #34d399; }
+.pink { background-color: #fb7185; }
+
