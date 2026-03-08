@@ -42,7 +42,8 @@ input, select {
 
 
 body.theme-blue { background-color: #e5f0ff; }
-body.theme-blue .topbar { background-color: #005ce6; }
+body.theme-blue .topbar { background: linear-gradient(to right, #2563eb, #7c3aed); }
+
 body.theme-blue th { background-color: #0a63ff; color: white; }
 body.theme-blue tr:nth-child(even) { background-color: #f2f9ff; }
 body.theme-blue .double-dp { background-color: #27c400; }
@@ -114,7 +115,7 @@ body.theme-pink .double-dp { background-color: #f43f5e; }
 }
 
 
-.col-result { color: #ff0000; font-weight: bold; } /
+.col-result { color: #ff0000; font-weight: bold; }
 .col-profit { color: #008000; font-weight: bold; } 
 .col-total { color: #0000ff; font-weight: bold; } 
 
