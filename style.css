@@ -87,3 +87,34 @@ body.theme-pink .double-dp { background-color: #f43f5e; }
 .green { background-color: #34d399; }
 .pink { background-color: #fb7185; }
 
+
+.topbar {
+  color: white;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+}
+
+
+.shimmer-text {
+  display: inline-block;
+  background: linear-gradient(to right, #ffffff 20%, #7dd3fc 50%, #ffffff 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
+  font-weight: bold;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+.col-result { color: #ff0000; font-weight: bold; } /
+.col-profit { color: #008000; font-weight: bold; } 
+.col-total { color: #0000ff; font-weight: bold; } 
+

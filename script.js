@@ -30,8 +30,14 @@ function createTable() {
     }
 
     const mmkResult = document.createElement('td');
-    const profitCell = document.createElement('td');
-    const totalCell = document.createElement('td');
+mmkResult.className = 'col-result'; 
+
+const profitCell = document.createElement('td');
+profitCell.className = 'col-profit'; 
+
+const totalCell = document.createElement('td');
+totalCell.className = 'col-total'; 
+
 
     tr.innerHTML = `
       <td>${index + 1}</td>
