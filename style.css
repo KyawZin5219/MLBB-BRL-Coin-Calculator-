@@ -1,37 +1,24 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 body {
-  font-family: 'Inter', 'Segoe UI', sans-serif;
-  padding: 10px;
-  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); /* Dark Gaming Background */
-  color: #f8fafc;
-  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  padding: 0; /* ဘေးအနားသတ်များ ဖယ်ရှားခြင်း */
   margin: 0;
+  background-color: #0f172a; /* Dark background */
+  color: #f8fafc;
 }
 
-/* Glassmorphism Container */
-.main-wrapper {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-/* Table Header Animation */
+/* Header ကို Screen အပြည့် ထားခြင်း */
 .topbar {
   background: linear-gradient(90deg, #6366f1, #a855f7);
-  padding: 12px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  padding: 15px 10px;
+  text-align: left;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .shimmer-text {
   font-weight: 700;
-  letter-spacing: 0.5px;
+  color: #fff;
   animation: shine 3s infinite;
   background: linear-gradient(to right, #fff 20%, #cbd5e1 50%, #fff 80%);
   background-size: 200% auto;
@@ -41,84 +28,79 @@ body {
 
 @keyframes shine { to { background-position: 200% center; } }
 
-/* Inputs Styling */
-input[type="number"] {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  padding: 12px;
-  color: #fff;
+/* Main Content ကို ဘေးအပြည့်ချဲ့ခြင်း */
+.main-wrapper {
+  padding: 10px;
   width: 100%;
-  margin: 10px 0 20px 0;
-  transition: all 0.3s ease;
   box-sizing: border-box;
 }
 
-input:focus {
-  border-color: #818cf8;
-  box-shadow: 0 0 10px rgba(129, 140, 248, 0.4);
-  outline: none;
+h2 { font-size: 16px; margin: 15px 5px; }
+label { display: block; margin: 10px 5px; font-size: 14px; color: #cbd5e1; }
+
+/* Input box များကို မူရင်းပုံစံအတိုင်း ထားခြင်း */
+input[type="number"] {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 12px;
+  color: #fff;
+  width: calc(100% - 10px);
+  margin: 0 5px 15px 5px;
+  font-size: 16px;
 }
 
-/* Table Styling */
+/* ဇယားကို Screen အပြည့်ချဲ့ခြင်း */
 .container {
+  width: 100%;
   overflow-x: auto;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12px;
+  font-size: 11px; /* ဖုန်းမှာ အကုန်မြင်ရအောင် စာလုံးဆိုဒ်ကို မူရင်းအတိုင်း ထားသည် */
+  background: #1e293b;
 }
 
 th {
-  background: rgba(99, 102, 241, 0.2);
-  color: #e2e8f0;
-  padding: 12px;
-  text-transform: uppercase;
-  font-weight: 600;
+  background: #1d4ed8; /* Blue header */
+  color: white;
+  padding: 8px 4px;
+  border: 1px solid #334155;
 }
 
 td {
-  padding: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 8px 4px;
+  border: 1px solid #334155;
   text-align: center;
 }
 
-tr:hover { background: rgba(255, 255, 255, 0.02); }
-
-/* Row Colors */
-.col-result { color: #f87171; font-weight: 600; } /* Red */
-.col-profit { color: #4ade80; font-weight: 600; } /* Green */
-.col-total { color: #60a5fa; font-weight: 700; font-size: 13px; } /* Blue */
+/* အရောင်ခွဲခြားမှုများ */
+.col-result { color: #f87171; font-weight: bold; } 
+.col-profit { color: #4ade80; font-weight: bold; } 
+.col-total { color: #60a5fa; font-weight: bold; } 
 
 .double-dp {
-  background: linear-gradient(90deg, #16a34a, #22c55e) !important;
+  background: #16a34a !important;
   color: white;
   font-weight: bold;
 }
 
-/* Action Buttons */
+/* ခလုတ်များ */
 .btn-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 15px;
+  gap: 8px;
+  padding: 10px 5px;
 }
 
 button {
   padding: 12px;
-  border-radius: 10px;
+  border-radius: 6px;
   border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
+  font-size: 12px;
 }
-
-button:active { transform: scale(0.95); }
