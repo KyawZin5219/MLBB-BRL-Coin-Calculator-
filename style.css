@@ -1,99 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 6px; /* မူရင်းအကွာအဝေး */
+  font-family: 'Inter', sans-serif;
+  padding: 0;
   margin: 0;
-  background-color: #f0f2f5; /* နောက်ခံအလင်းရောင် */
-  max-width: 100%;
+  background-color: #0f172a; 
+  color: #f8fafc;
 }
 
-/* Header ကို မူရင်းအတိုင်း ဘေးအပြည့်ထားခြင်း */
+/* Header Padding ကို ၁၅ မှ ၈ သို့ လျှော့ချခြင်း */
 .topbar {
-  background-color: #005ce6; /* မူရင်းအပြာရောင် */
-  color: white;
-  padding: 8px;
-  font-size: 14px;
-  font-weight: bold;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  padding: 8px 10px; /* အပေါ်အောက် အကွာအဝေး လျှော့ချ */
   text-align: left;
-  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  margin-bottom: 2px; /* အောက်က element နဲ့ ပိုကပ်စေရန် */
 }
 
-/* Animation ကို ဆက်ထားပေးပါသည် */
 .shimmer-text {
-  display: inline-block;
-  background: linear-gradient(to right, #ffffff 20%, #7dd3fc 50%, #ffffff 80%);
+  font-weight: 700;
+  color: #fff;
+  animation: shine 3s infinite;
+  background: linear-gradient(to right, #fff 20%, #cbd5e1 50%, #fff 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
 }
 
 @keyframes shine { to { background-position: 200% center; } }
 
-h2 { font-size: 15px; margin: 10px 0; color: #333; }
-
-label { font-size: 13px; color: #555; display: block; margin-top: 10px; }
-
-/* Input box များကို မူရင်းအတိုင်း ပြင်ခြင်း */
-input[type="number"] {
-  padding: 8px;
-  font-size: 14px;
-  margin: 5px 0;
+.main-wrapper {
+  padding: 5px 10px; /* Padding လျှော့ချ */
   width: 100%;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
-/* ဇယားကို မူရင်းအကွာအဝေးအတိုင်း ထားခြင်း */
+/* ခေါင်းစဉ် Margin ကို ၁၅ မှ ၅ သို့ လျှော့ချခြင်း */
+h2 { 
+  font-size: 16px; 
+  margin: 5px 5px; /* အပေါ်အောက် အကွာအဝေး ညှိခြင်း */
+}
+
+/* Label Margin ကို ၁၀ မှ ၂ သို့ လျှော့ချခြင်း */
+label { 
+  display: block; 
+  margin: 2px 5px; /* Input နဲ့ ကပ်သွားစေရန် */
+  font-size: 13px; 
+  color: #cbd5e1; 
+}
+
+/* Input box အောက်က Margin ကို ၁၅ မှ ၈ သို့ လျှော့ချခြင်း */
+input[type="number"] {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 10px; /* padding ကို အနည်းငယ်လျှော့ */
+  color: #fff;
+  width: calc(100% - 10px);
+  margin: 0 5px 8px 5px; /* အောက်က element နဲ့ အကွာအဝေး လျှော့ချ */
+  font-size: 15px;
+}
+
+/* ဇယား အပေါ်က အကွာအဝေးကို ၁၀ မှ ၅ သို့ လျှော့ချခြင်း */
 .container {
   width: 100%;
   overflow-x: auto;
-  margin-top: 10px;
+  margin-top: 5px; /* */
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
-  font-size: 11px; /* မူရင်းစာလုံးဆိုဒ် */
-}
-
-th, td {
-  border: 1px solid #999;
-  padding: 5px 3px;
-  text-align: center;
+  font-size: 11px; 
+  background: #1e293b;
 }
 
 th {
-  background-color: #0a63ff; /* မူရင်း Table Header အပြာ */
+  background: #1d4ed8; 
   color: white;
+  padding: 8px 4px;
+  border: 1px solid #334155;
 }
 
-/* အရောင်ခွဲခြားမှုများ */
-.col-result { color: #ff0000; font-weight: bold; } 
-.col-profit { color: #008000; font-weight: bold; } 
-.col-total { color: #0000ff; font-weight: bold; } 
+td {
+  padding: 8px 4px;
+  border: 1px solid #334155;
+  text-align: center;
+}
+
+.col-result { color: #f87171; font-weight: bold; } 
+.col-profit { color: #4ade80; font-weight: bold; } 
+.col-total { color: #60a5fa; font-weight: bold; } 
 
 .double-dp {
-  background-color: #27c400 !important; /* မူရင်းအစိမ်းရောင် */
+  background: #16a34a !important;
   color: white;
   font-weight: bold;
 }
 
-/* ခလုတ်များ */
 .btn-grid {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 8px 5px; /* ခလုတ်များကြား အကွာအဝေး ညှိခြင်း */
 }
 
 button {
-  padding: 8px 12px;
-  font-size: 12px;
+  padding: 10px; /* padding အနည်းငယ်လျှော့ */
+  border-radius: 6px;
   border: none;
-  border-radius: 5px;
+  font-weight: 600;
   cursor: pointer;
-  color: white;
-  font-weight: bold;
+  font-size: 12px;
 }
